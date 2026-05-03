@@ -12,7 +12,6 @@ var userMoney = 2;
 var userAge = 14;
 var currentYear = 2026;
 var newMoney;
-var username = "Emme";
 
 
 /*
@@ -28,9 +27,9 @@ displayProduct("Drink", "2.50" )
 Functions
 */
 function getFormInput () {
-    const USER_NAME = document.getElementById("Namefield");
-    let username = USER_NAME.ariaValueMax;
+    let username = document.getElementById("Namefield").value;
     Output.innerHTML += "<p>Hi " + username + "</p>";
+    console.log(username)
 }
 
 function start () {
