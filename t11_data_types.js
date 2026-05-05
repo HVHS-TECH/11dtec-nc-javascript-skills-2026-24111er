@@ -33,10 +33,18 @@ function getFormInputN () {
 }
 
 function getFormInputA () {
+    const AGE = document.getElementById("Agefield").value;
+    let userAge = Number(AGE);
+    Output.innerHTML += "<p>As of " + currentYear + " you are " + userAge + " years old</p>";
+    console.log(userAge)
 
 }
 
 function getFormInputM () {
+    const MONEY = document.getElementById("Moneyfield").value;
+    let userMoney = Number(MONEY);
+    Output.innerHTML += "<p>You have " + userMoney + " dollars</p>";
+    console.log(userMoney)
     
 }
 

@@ -20,6 +20,17 @@
   <p>Open the console <code>(Ctrl-shift-i)</code> to see the messages.</p>
 
   <p><br><br><i>Copy your HTML from the last task and keep building.</i><br><br><br><br></p>
+  <form onsubmit="return false;"> 
+    <label for="namelabel">Name:</label>
+    <input type="text" id="Namefield" name="namelabel">
+    <input type="submit" onClick="getFormInputN()">
+    <label for="agelabel">Age:</label>
+    <input type="text" id="Agefield" name="agelabel">
+    <input type="submit" onClick="getFormInputA()">
+    <label for="moneylabel">Pocket Money:</label>
+    <input type="text" id="Moneyfield" name="moneylabel">
+    <input type="submit" onClick="getFormInputM()">
+  </form>
 
   <div id="spaceForJavaScriptOutput">
 
