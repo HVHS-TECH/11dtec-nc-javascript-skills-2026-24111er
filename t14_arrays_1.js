@@ -1,7 +1,7 @@
 /****************************
-T12 Conditionals
+T14 Arrays 1
 ***********************/
-console.log("Running t12.js")
+console.log("Running t14.js")
 console.log("Hello World!")
 
 // Variables
@@ -59,6 +59,12 @@ function getFormInputM () {
         Output.innerHTML += "<p>A chocolate bar costs $4</p>";
         Output.innerHTML += "<p>Sorry, you CAN'T afford a chocolate bar</p>";
     }
+}
+
+function getFormInputC () {
+    let chocolateLikeness = document.getElementById("Chocolatefield").value;
+    let choco = Number(chocolateLikeness);
+    Output.innerHTML = choco;
 }
 
 function start () {
