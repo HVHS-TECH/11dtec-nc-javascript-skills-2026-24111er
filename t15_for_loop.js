@@ -23,7 +23,7 @@ function getFormInputCo () {
     let choiceCount = Number(countValue);
 
     for (i= choiceCount; i>=0; i--) {
-        Output.innerHTML = "<p>" + i + "bottles of milk on the wall";
+        Output.innerHTML = "<p>There are " + i + "bottles of milk on the wall";
         console.log (i)
 
     }
