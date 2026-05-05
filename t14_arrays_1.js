@@ -18,11 +18,12 @@ var newMoney;
 /*
 Main Code
 */
+/*
 welcome()
 displayProduct("Chocolate bar", 4 )
 displayProduct("Chips", 3 )
 displayProduct("Drink", "2.50" )
-
+*/
 
 
 
@@ -70,7 +71,7 @@ function start () {
     Output.innerHTML += "<p>Then you get $3, now you have " + (newMoney + 3) + " dollars</p>";
 
 }
-
+/*
 function welcome() {
     Output.innerHTML = "<h1>Welcome to the Shop</h1>";
     console.log("h1")
@@ -85,3 +86,4 @@ function calculateChange(_money, _productPrice) {
     let change = _money - _productPrice;
     return change;
 }
+*/
