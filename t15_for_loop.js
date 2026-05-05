@@ -24,6 +24,7 @@ function getFormInputCo () {
 
     for (i= choiceCount; i>=0; i--) {
         Output.innerHTML = "<p>" + i + "bottles of milk on the wall";
+        console.log (i)
 
     }
 }
