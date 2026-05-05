@@ -18,10 +18,11 @@ var newMoney;
 /*
 Main Code
 */
-// welcome()
-// displayProduct("Chocolate bar", 4 )
-// displayProduct("Chips", 3 )
-// displayProduct("Drink", "2.50" )
+welcome()
+displayProduct("Chocolate bar", 4 )
+displayProduct("Chips", 3 )
+displayProduct("Drink", "2.50" )
+
 
 
 
@@ -52,6 +53,7 @@ function getFormInputM () {
     if (userMoney>=4) {
         Output.innerHTML += "<p>A chocolate bar costs $4</p>";
         Output.innerHTML += "<p>You CAN afford a chocolate bar</p>";
+        Output.innerHTML += "<p> You will get $" + calculateChange(userMoney, 4) + " change</p>";
     } else if (userMoney<4) {
         Output.innerHTML += "<p>A chocolate bar costs $4</p>";
         Output.innerHTML += "<p>Sorry, you CAN'T afford a chocolate bar</p>";
@@ -69,12 +71,17 @@ function start () {
 
 }
 
-// function welcome() {
-//     Output.innerHTML = "<h1>Welcome to the Shop</h1>";
-//     console.log("h1")
-// }
+function welcome() {
+    Output.innerHTML = "<h1>Welcome to the Shop</h1>";
+    console.log("h1")
+}
 
-// function displayProduct(_name, _price) {
-//     Output.innerHTML += "<p>" +_name+ ": $" +_price+ "</p>";
+function displayProduct(_name, _price) {
+    Output.innerHTML += "<p>" +_name+ ": $" +_price+ "</p>";
 
-// }
+}
+
+function calculateChange(_money, _productPrice) {
+    let change = _money - _productPrice;
+    return change;
+}
