@@ -7,6 +7,7 @@ console.log("Hello World!")
 // Variables
 const Output = document.getElementById("spaceForJavaScriptOutput");
 
+var chocolateLike = ["You loath chocolate", "Chocolate is meh", "Chocolate is pretty good", "Chocolate is the best thing EVER!!!!"];
 var username;
 var userMoney;
 var userAge;
