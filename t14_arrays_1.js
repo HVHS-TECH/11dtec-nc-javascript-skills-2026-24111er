@@ -64,7 +64,7 @@ function getFormInputM () {
 function getFormInputC () {
     let chocolateLikeness = document.getElementById("Chocolatefield").value;
     let choco = Number(chocolateLikeness);
-    Output.innerHTML = choco;
+    Output.innerHTML = chocolateLike[choco];
 }
 
 function start () {
