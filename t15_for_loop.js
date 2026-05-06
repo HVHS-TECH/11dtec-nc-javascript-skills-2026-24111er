@@ -24,16 +24,14 @@ function getFormInputCo () {
     let countValue = document.getElementById("Countfield").value;
     let choiceCount = Number(countValue);
 
-    for (i= choiceCount; i>=0; i--) {
-
-        if (i=1) {
-            Output.innerHTML += "<p>There is 1 bottle of milk on the wall</p>";
-        } else {
-            Output.innerHTML += "<p>There are " + i +  " bottles of milk on the wall</p>";
-        }
+    for (i= choiceCount; i>=2; i--) {
+        Output.innerHTML += "<p>There are " + i +  " bottles of milk on the wall</p>";
         console.log (i)
-
     }
+
+    i = 1;
+    Output.innerHTML += "<p>There is 1 bottle of milk on the wall</p>";
+
 
    
 }
