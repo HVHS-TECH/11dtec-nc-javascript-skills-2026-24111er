@@ -25,16 +25,15 @@ function getFormInputCo () {
     let choiceCount = Number(countValue);
 
     for (i= choiceCount; i>=0; i--) {
-        Output.innerHTML += "<p>There " + are + i + bottles + " of milk on the wall";
-        console.log (i)
 
         if (i=1) {
-            are = "is";
-            bottles = "bottle";
+            Output.innerHTML += "<p>There is " + i +  " bottle of milk on the wall";
         } else {
-            are = "are";
-            bottles = "bottles"
+            Output.innerHTML += "<p>There are " + i +  " bottles of milk on the wall";
         }
+        console.log (i)
 
     }
+
+   
 }
