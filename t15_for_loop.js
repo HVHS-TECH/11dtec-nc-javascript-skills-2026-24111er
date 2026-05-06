@@ -6,6 +6,8 @@ console.log("Hello World!")
 
 const Output = document.getElementById("spaceForJavaScriptOutput");
 var i;
+var are;
+var bottles;
 // Variables
 // This is a single line comment
 
@@ -23,8 +25,16 @@ function getFormInputCo () {
     let choiceCount = Number(countValue);
 
     for (i= choiceCount; i>=0; i--) {
-        Output.innerHTML += "<p>There are " + i + " bottles of milk on the wall";
+        Output.innerHTML += "<p>There " + are + i + bottles + " of milk on the wall";
         console.log (i)
+
+        if (i=1) {
+            are = "is";
+            bottles = "bottle";
+        } else {
+            are = "are";
+            bottles = "bottles"
+        }
 
     }
 }
