@@ -5,6 +5,7 @@ console.log("Running t016_introduction.js")
 console.log("Hello World!")
 
 const Output = document.getElementById("spaceForJavaScriptOutput");
+const twoOutput = document.getElementById("spaceForJavaScriptOutputTwo")
 var shoppingArray = [];
 var l;
 // Variables
