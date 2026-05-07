@@ -6,8 +6,7 @@ console.log("Hello World!")
 
 const Output = document.getElementById("spaceForJavaScriptOutput");
 var i;
-var are;
-var bottles;
+
 // Variables
 // This is a single line comment
 
