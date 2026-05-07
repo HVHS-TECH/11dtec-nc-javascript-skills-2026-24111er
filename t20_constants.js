@@ -74,7 +74,7 @@ function getFormInputCountVerses () {
 
 
 
-function getFormInputN () {
+function getFormInputName () {
     OUTPUT.innerHTML = "";
     SECOND_OUTPUT.innerHTML = "";
     const NAME = document.getElementById("Namefield");
@@ -84,7 +84,7 @@ function getFormInputN () {
     if (isNaN(NAME.value) === false) {
         OUTPUT.innerHTML = "<b><p>Numbers can not be inserted in this area</p></b>";
         
-    } else if(_userName.length<3) {
+    } else if(_userName.length<MIN_LETTERS) {
         OUTPUT.innerHTML = "<b><p>Please insert a name at least 3 letters long</p></b>";
         
     } else {
@@ -94,36 +94,37 @@ function getFormInputN () {
 
 }
 
-function getFormInputA () {
+function getFormInputAge () {
     OUTPUT.innerHTML = "";
     SECOND_OUTPUT.innerHTML = "";
     const AGE = document.getElementById("Agefield");
-    let userAge = Number(AGE.value);
+    let _userAge = Number(AGE.value);
 
     if (AGE.checkValidity() === false) {
         OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
     } else {
-        OUTPUT.innerHTML += "<p>As of " + currentYear + " you are " + userAge + " years old</p>";
+        OUTPUT.innerHTML += "<p>As of " + CURRENT_YEAR + " you are " + _userAge + " years old</p>";
         console.log(userAge)
     }
 
 }
 
-function getFormInputM () {
+function getFormInputMoney () {
     OUTPUT.innerHTML = "";
     SECOND_OUTPUT.innerHTML = "";
     const MONEY = document.getElementById("Moneyfield");
-    let userMoney = Number(MONEY.value);
+    let _userMoney = Number(MONEY.value);
+    const COST_CHOCOLATE = 4;
 
     if (MONEY.checkValidity() === false) {
         OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
     } else {
-        OUTPUT.innerHTML += "<p>You have " + userMoney + " dollars</p>";
-        console.log(userMoney)
-        if (userMoney>=4) {
+        OUTPUT.innerHTML += "<p>You have " + _userMoney + " dollars</p>";
+        console.log(_userMoney)
+        if (_userMoney>=COST_CHOCOLATE) {
             OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
             OUTPUT.innerHTML += "<p>You CAN afford a chocolate bar</p>";
-        } else if (userMoney<4) {
+        } else if (_userMoney<COST_CHOCOLATE) {
             OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
             OUTPUT.innerHTML += "<p>Sorry, you CAN'T afford a chocolate bar</p>";
         }
