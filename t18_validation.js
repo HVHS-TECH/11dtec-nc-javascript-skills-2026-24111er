@@ -89,7 +89,7 @@ function getFormInputN () {
         console.log(username)
     }*/
 
-    if (typeof NAME === "string") {
+    if (typeof NAME == "string") {
         Output.innerHTML += "<p>Hi " + username + "</p>";
         console.log(username)
         
