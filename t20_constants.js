@@ -46,8 +46,8 @@ function getFormInputList () {
    
 }
 
-function getFormInputCo () {
-    const countValue = document.getElementById("Countfield");
+function getFormInputCountVerses () {
+    const COUNT_VALUE = document.getElementById("Countfield");
     let choiceCount = Number(countValue.value);
     OUTPUT.innerHTML = "";
     SECOND_OUTPUT.innerHTML = "";
