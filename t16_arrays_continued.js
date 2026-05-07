@@ -5,6 +5,7 @@ console.log("Running t016_introduction.js")
 console.log("Hello World!")
 
 const Output = document.getElementById("spaceForJavaScriptOutput");
+var chocolateLike = [];
 var i;
 // Variables
 
@@ -17,7 +18,7 @@ Main Code
 Functions
 */
 
-function getFormInputCo () {
+function getFormInputS () {
     let countValue = document.getElementById("Countfield").value;
     let choiceCount = Number(countValue);
 
