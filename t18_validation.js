@@ -75,13 +75,15 @@ function getFormInputN () {
 
 function getFormInputA () {
 
-    if (userAge.checkValidity() === false) {
-        
-    }
     const AGE = document.getElementById("Agefield").value;
     let userAge = Number(AGE);
-    Output.innerHTML += "<p>As of " + currentYear + " you are " + userAge + " years old</p>";
-    console.log(userAge)
+
+    if (userAge.checkValidity() === false) {
+        Output.innerHTML = "<p>Only numbers can be entered into this field</p>"
+    } else {
+        Output.innerHTML += "<p>As of " + currentYear + " you are " + userAge + " years old</p>";
+        console.log(userAge)
+    }
 
 }
 
