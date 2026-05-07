@@ -1,7 +1,7 @@
 /****************************
-T16 Arrays Continued
+T19 String Handling
 ****************************/
-console.log("Running t016_introduction.js")
+console.log("Running t19_introduction.js")
 console.log("Hello World!")
 
 const Output = document.getElementById("spaceForJavaScriptOutput");
