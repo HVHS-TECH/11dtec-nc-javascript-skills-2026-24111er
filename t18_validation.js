@@ -80,8 +80,14 @@ function getFormInputN () {
     Output.innerHTML = "";
     twoOutput.innerHTML = "";
     let username = document.getElementById("Namefield").value;
-    Output.innerHTML += "<p>Hi " + username + "</p>";
-    console.log(username)
+
+    if (Number.username === true) {
+        Output.innerHTML = "<b><p>Only letters can be inserted into this field</p></b>";
+        
+    } else {
+        Output.innerHTML += "<p>Hi " + username + "</p>";
+        console.log(username)
+    }
 }
 
 function getFormInputA () {
