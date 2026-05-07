@@ -5,8 +5,8 @@ console.log("Running t016_introduction.js")
 console.log("Hello World!")
 
 const Output = document.getElementById("spaceForJavaScriptOutput");
-var chocolateLike = [];
-var i;
+var shoppingArray = [];
+var l;
 // Variables
 
 /*
@@ -19,16 +19,21 @@ Functions
 */
 
 function getFormInputS () {
-    let countValue = document.getElementById("Countfield").value;
-    let choiceCount = Number(countValue);
+    let ShoppingValue = document.getElementById("Shoppingfield").value;
+    shoppingArray.push(ShoppingValue)
 
-    for (i= choiceCount; i>=2; i--) {
-        Output.innerHTML += "<p>There are " + i +  " bottles of milk on the wall</p>";
-        console.log (i)
+    Output.innerHTML = "<p>You have added" + ShoppingValue + "to your list</p>";
+
+
+   
+}
+
+function getFormInputL () {
+
+    for (l = 0; l<=shoppingArray.length; l++) {
+        Output.innerHTML += "<ul>Shopping List:</ul>";
+        Output.innerHTML += "<li>" + l + "</li>"
     }
-
-    i = 1;
-    Output.innerHTML += "<p>There is 1 bottle of milk on the wall</p>";
 
 
    
