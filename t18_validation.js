@@ -81,22 +81,12 @@ function getFormInputN () {
     const NAME = document.getElementById("Namefield");
     let username = (NAME.value)
 
-    /*if (isNaN(NAME.value) === false) {
-        Output.innerHTML = "<b><p>Only letters can be inserted into this field</p></b>";
+    if (isNaN(NAME.value) === false) {
+        Output.innerHTML = "<b><p>Numbers can not be inserted in this area</p></b>";
         
     } else {
         Output.innerHTML += "<p>Hi " + username + "</p>";
         console.log(username)
-    }*/
-
-    if (typeof NAME == "string") {
-        Output.innerHTML += "<p>Hi " + username + "</p>";
-        console.log(username)
-        
-        
-    } else {
-        Output.innerHTML = "<b><p>Only letters can be inserted into this field</p></b>";
-        
     }
 
 }
