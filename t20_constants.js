@@ -46,9 +46,9 @@ function getFormInputList () {
    
 }
 
-function getFormInputCountVerses () {
+function getFormInputCountVerses() {
     const COUNT_VALUE = document.getElementById("Countfield");
-    let _verseCount = Number(countValue.value);
+    let _verseCount = Number(COUNT_VALUE.value);
     const VERSE_MAX = 99;
     const VERSE_MIN = 1;
     OUTPUT.innerHTML = "";
