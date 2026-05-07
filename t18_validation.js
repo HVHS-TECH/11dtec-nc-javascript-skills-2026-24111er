@@ -20,7 +20,7 @@ var newMoney;
 Main Code
 */
 
-welcome()
+// welcome()
 displayProduct("Chocolate bar", 4 )
 displayProduct("Chips", 3 )
 displayProduct("Drink", "2.50" )
@@ -113,10 +113,10 @@ function start () {
 
 }
 
-function welcome() {
-    Output.innerHTML = "<h1>Welcome to the Shop</h1>";
-    console.log("h1")
-}
+// function welcome() {
+//     Output.innerHTML = "<h1>Welcome to the Shop</h1>";
+//     console.log("h1")
+// }
 
 function displayProduct(_name, _price) {
     Output.innerHTML += "<p>" +_name+ ": $" +_price+ "</p>";
