@@ -22,17 +22,16 @@ function getFormInputS () {
     let ShoppingValue = document.getElementById("Shoppingfield").value;
     shoppingArray.push(ShoppingValue)
 
-    Output.innerHTML = "<p>You have added" + ShoppingValue + "to your list</p>";
+    Output.innerHTML += "<p>You have added " + ShoppingValue + " to your list</p>";
 
 
    
 }
 
 function getFormInputL () {
-
-    for (l = 0; l<=shoppingArray.length; l++) {
-        Output.innerHTML += "<ul>Shopping List:</ul>";
-        Output.innerHTML += "<li>" + l + "</li>"
+    Output.innerHTML = "<ul>Shopping List:</ul>";
+    for (l = 0; l<shoppingArray.length; l++) {
+        Output.innerHTML += "<li>" + shoppingArray[l] + "</li>"
     }
 
 
