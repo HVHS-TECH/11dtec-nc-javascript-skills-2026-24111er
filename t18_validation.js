@@ -79,9 +79,10 @@ function getFormInputCo () {
 function getFormInputN () {
     Output.innerHTML = "";
     twoOutput.innerHTML = "";
-    let username = document.getElementById("Namefield").value;
+    const NAME = document.getElementById("Namefield");
+    let username = (NAME.value)
 
-    if (Number.username === true) {
+    if (NAME.checkValidity() === false) {
         Output.innerHTML = "<b><p>Only letters can be inserted into this field</p></b>";
         
     } else {
