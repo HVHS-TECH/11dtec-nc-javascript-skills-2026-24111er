@@ -30,9 +30,9 @@ function getFormInputS () {
 }
 
 function getFormInputL () {
-    Output.innerHTML = "<ul>Shopping List:</ul>";
+    twoOutput.innerHTML = "<ul>Shopping List:</ul>";
     for (l = 0; l<shoppingArray.length; l++) {
-        Output.innerHTML += "<li>" + shoppingArray[l] + "</li>"
+        twoOutput.innerHTML += "<li>" + shoppingArray[l] + "</li>"
     }
 
 
