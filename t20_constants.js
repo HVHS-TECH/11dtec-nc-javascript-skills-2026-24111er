@@ -79,6 +79,7 @@ function getFormInputN () {
     SECOND_OUTPUT.innerHTML = "";
     const NAME = document.getElementById("Namefield");
     let _userName = (NAME.value)
+    const MIN_LETTERS = 3;
 
     if (isNaN(NAME.value) === false) {
         OUTPUT.innerHTML = "<b><p>Numbers can not be inserted in this area</p></b>";
