@@ -48,16 +48,18 @@ function getFormInputList () {
 
 function getFormInputCountVerses () {
     const COUNT_VALUE = document.getElementById("Countfield");
-    let choiceCount = Number(countValue.value);
+    let _verseCount = Number(countValue.value);
+    const VERSE_MAX = 99;
+    const VERSE_MIN = 1;
     OUTPUT.innerHTML = "";
     SECOND_OUTPUT.innerHTML = "";
 
-    if (countValue.checkValidity() === false) {
+    if (COUNT_VALUE.checkValidity() === false) {
         OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
-    } else if (choiceCount>99 || choiceCount<1) {
+    } else if (_verseCount>VERSE_MAX || _verseCount<VERSE_MIN) {
         OUTPUT.innerHTML = "<b><p>Please enter a number between 1 and 99</p></b>";
     } else {
-        for (i = choiceCount; i>=2; i--) {
+        for (i = _verseCount; i>=2; i--) {
             OUTPUT.innerHTML += "<p>There are " + i +  " bottles of milk on the wall</p>";
             console.log (i)
         }
