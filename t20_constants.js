@@ -5,14 +5,11 @@ console.log("Running t20.js")
 console.log("Hello World!")
 
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-const twoOUTPUT = document.getElementById("spaceForJavaScriptOutputTwo")
+const SECOND_OUTPUT = document.getElementById("spaceForJavaScriptOutputTwo")
 var shoppingArray = [];
 var l;
 var i;
-var username;
-var userMoney;
-var userAge;
-var currentYear = 2026;
+const CURRENT_YEAR = 2026;
 var newMoney;
 // Variables
 
@@ -30,19 +27,19 @@ displayProduct("Drink", "2.50" )
 Functions
 */
 
-function getFormInputS () {
+function getFormInputShopping () {
     OUTPUT.innerHTML = "";
-    twoOUTPUT.innerHTML = "";
-    let ShoppingValue = document.getElementById("Shoppingfield").value;
-    shoppingArray.push(ShoppingValue)
-    OUTPUT.innerHTML += "<p>You have added " + ShoppingValue + " to your list</p>";
+    SECOND_OUTPUT.innerHTML = "";
+    let _shoppingValue = document.getElementById("Shoppingfield").value;
+    shoppingArray.push(_shoppingValue)
+    OUTPUT.innerHTML += "<p>You have added " + _shoppingValue + " to your list</p>";
    
 }
 
-function getFormInputL () {
-    twoOUTPUT.innerHTML = "<ul>These are the items on your shopping list:</ul>";
+function getFormInputList () {
+    SECOND_OUTPUT.innerHTML = "<ul>These are the items on your shopping list:</ul>";
     for (l = 0; l<shoppingArray.length; l++) {
-        twoOUTPUT.innerHTML += "<li>" + shoppingArray[l] + "</li>"
+        SECOND_OUTPUT.innerHTML += "<li>" + shoppingArray[l] + "</li>"
     }
 
 
@@ -53,7 +50,7 @@ function getFormInputCo () {
     const countValue = document.getElementById("Countfield");
     let choiceCount = Number(countValue.value);
     OUTPUT.innerHTML = "";
-    twoOUTPUT.innerHTML = "";
+    SECOND_OUTPUT.innerHTML = "";
 
     if (countValue.checkValidity() === false) {
         OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
@@ -77,26 +74,26 @@ function getFormInputCo () {
 
 function getFormInputN () {
     OUTPUT.innerHTML = "";
-    twoOUTPUT.innerHTML = "";
+    SECOND_OUTPUT.innerHTML = "";
     const NAME = document.getElementById("Namefield");
-    let username = (NAME.value)
+    let _userName = (NAME.value)
 
     if (isNaN(NAME.value) === false) {
         OUTPUT.innerHTML = "<b><p>Numbers can not be inserted in this area</p></b>";
         
-    } else if(username.length<3) {
+    } else if(_userName.length<3) {
         OUTPUT.innerHTML = "<b><p>Please insert a name at least 3 letters long</p></b>";
         
     } else {
-        OUTPUT.innerHTML += "<p>Hi " + username + "</p>";
-        console.log(username)
+        OUTPUT.innerHTML += "<p>Hi " + _userName + "</p>";
+        console.log(_userName)
     }
 
 }
 
 function getFormInputA () {
     OUTPUT.innerHTML = "";
-    twoOUTPUT.innerHTML = "";
+    SECOND_OUTPUT.innerHTML = "";
     const AGE = document.getElementById("Agefield");
     let userAge = Number(AGE.value);
 
@@ -111,7 +108,7 @@ function getFormInputA () {
 
 function getFormInputM () {
     OUTPUT.innerHTML = "";
-    twoOUTPUT.innerHTML = "";
+    SECOND_OUTPUT.innerHTML = "";
     const MONEY = document.getElementById("Moneyfield");
     let userMoney = Number(MONEY.value);
 
@@ -134,7 +131,7 @@ function getFormInputM () {
 
 function start () {
     OUTPUT.innerHTML = "";
-    twoOUTPUT.innerHTML = "";
+    SECOND_OUTPUT.innerHTML = "";
     OUTPUT.innerHTML += "<h2>Added by Javascript</h2>";
     OUTPUT.innerHTML += "<p>As of " + currentYear + " you are " + userAge + " years old</p>";
     OUTPUT.innerHTML += "<p>You were born in " + (currentYear - userAge) + "</p>";
