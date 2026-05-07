@@ -81,7 +81,7 @@ function getFormInputN () {
     const NAME = document.getElementById("Namefield");
     let username = (NAME.value)
 
-    if (NAME.checkValidity() === false) {
+    if (isNaN(NAME.value) === false) {
         Output.innerHTML = "<b><p>Only letters can be inserted into this field</p></b>";
         
     } else {
