@@ -31,10 +31,11 @@ Functions
 */
 
 function getFormInputS () {
+    Output.innerHTML = "";
+    twoOutput.innerHTML = "";
     let ShoppingValue = document.getElementById("Shoppingfield").value;
     shoppingArray.push(ShoppingValue)
     Output.innerHTML += "<p>You have added " + ShoppingValue + " to your list</p>";
-    twoOutput.innerHTML = "";
    
 }
 
@@ -49,18 +50,24 @@ function getFormInputL () {
 }
 
 function getFormInputCo () {
-    let countValue = document.getElementById("Countfield").value;
-    let choiceCount = Number(countValue);
+    const countValue = document.getElementById("Countfield");
+    let choiceCount = Number(countValue.value);
     Output.innerHTML = "";
     twoOutput.innerHTML = "";
 
-    for (i= choiceCount; i>=2; i--) {
-        Output.innerHTML += "<p>There are " + i +  " bottles of milk on the wall</p>";
-        console.log (i)
-    }
+    if (countValue.checkValidity() === false) {
+        Output.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
+    } else if (choiceCount>99 || choiceCount<0) {
+        Output.innerHTML = "<b><p>Please enter a number within the given range</p></b>";
+    } else {
+        for (i= choiceCount; i>=2; i--) {
+            Output.innerHTML += "<p>There are " + i +  " bottles of milk on the wall</p>";
+            console.log (i)
+        }
 
-    i = 1;
-    Output.innerHTML += "<p>There is 1 bottle of milk on the wall</p>";
+        i = 1;
+        Output.innerHTML += "<p>There is 1 bottle of milk on the wall</p>";
+    }
 
 
    
@@ -95,18 +102,24 @@ function getFormInputA () {
 function getFormInputM () {
     Output.innerHTML = "";
     twoOutput.innerHTML = "";
-    const MONEY = document.getElementById("Moneyfield").value;
-    let userMoney = Number(MONEY);
-    Output.innerHTML += "<p>You have " + userMoney + " dollars</p>";
-    console.log(userMoney)
+    const MONEY = document.getElementById("Moneyfield");
+    let userMoney = Number(MONEY.value);
 
-    if (userMoney>=4) {
-        Output.innerHTML += "<p>A chocolate bar costs $4</p>";
-        Output.innerHTML += "<p>You CAN afford a chocolate bar</p>";
-    } else if (userMoney<4) {
-        Output.innerHTML += "<p>A chocolate bar costs $4</p>";
-        Output.innerHTML += "<p>Sorry, you CAN'T afford a chocolate bar</p>";
+    if (MONEY.checkValidity() === false) {
+        Output.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
+    } else {
+        Output.innerHTML += "<p>You have " + userMoney + " dollars</p>";
+        console.log(userMoney)
+        if (userMoney>=4) {
+            Output.innerHTML += "<p>A chocolate bar costs $4</p>";
+            Output.innerHTML += "<p>You CAN afford a chocolate bar</p>";
+        } else if (userMoney<4) {
+            Output.innerHTML += "<p>A chocolate bar costs $4</p>";
+            Output.innerHTML += "<p>Sorry, you CAN'T afford a chocolate bar</p>";
+        }
     }
+
+    
 }
 
 function start () {
