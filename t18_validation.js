@@ -51,6 +51,8 @@ function getFormInputL () {
 function getFormInputCo () {
     let countValue = document.getElementById("Countfield").value;
     let choiceCount = Number(countValue);
+    Output.innerHTML = "";
+    twoOutput.innerHTML = "";
 
     for (i= choiceCount; i>=2; i--) {
         Output.innerHTML += "<p>There are " + i +  " bottles of milk on the wall</p>";
@@ -68,13 +70,16 @@ function getFormInputCo () {
 
 
 function getFormInputN () {
+    Output.innerHTML = "";
+    twoOutput.innerHTML = "";
     let username = document.getElementById("Namefield").value;
     Output.innerHTML += "<p>Hi " + username + "</p>";
     console.log(username)
 }
 
 function getFormInputA () {
-
+    Output.innerHTML = "";
+    twoOutput.innerHTML = "";
     const AGE = document.getElementById("Agefield").value;
     let userAge = Number(AGE);
 
@@ -88,6 +93,8 @@ function getFormInputA () {
 }
 
 function getFormInputM () {
+    Output.innerHTML = "";
+    twoOutput.innerHTML = "";
     const MONEY = document.getElementById("Moneyfield").value;
     let userMoney = Number(MONEY);
     Output.innerHTML += "<p>You have " + userMoney + " dollars</p>";
@@ -103,6 +110,8 @@ function getFormInputM () {
 }
 
 function start () {
+    Output.innerHTML = "";
+    twoOutput.innerHTML = "";
     Output.innerHTML += "<h2>Added by Javascript</h2>";
     Output.innerHTML += "<p>As of " + currentYear + " you are " + userAge + " years old</p>";
     Output.innerHTML += "<p>You were born in " + (currentYear - userAge) + "</p>";
