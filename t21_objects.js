@@ -143,18 +143,18 @@ function getFormInput () {
     
 // }
 
-function start () {
-    OUTPUT.innerHTML = "";
-    SECOND_OUTPUT.innerHTML = "";
-    OUTPUT.innerHTML += "<h2>Added by Javascript</h2>";
-    OUTPUT.innerHTML += "<p>As of " + currentYear + " you are " + userAge + " years old</p>";
-    OUTPUT.innerHTML += "<p>You were born in " + (currentYear - userAge) + "</p>";
-    OUTPUT.innerHTML += "<p>In 10 years you will be " + (userAge + 10) + "</p>";
-    OUTPUT.innerHTML += "<p>You have " + userMoney + " dollars</p>";
-    OUTPUT.innerHTML += "<p>You spend half of your money and now you have " + (newMoney = (userMoney / 2)) + " dollar</p>";
-    OUTPUT.innerHTML += "<p>Then you get $3, now you have " + (newMoney + 3) + " dollars</p>";
+// function start () {
+//     OUTPUT.innerHTML = "";
+//     SECOND_OUTPUT.innerHTML = "";
+//     OUTPUT.innerHTML += "<h2>Added by Javascript</h2>";
+//     OUTPUT.innerHTML += "<p>As of " + currentYear + " you are " + userAge + " years old</p>";
+//     OUTPUT.innerHTML += "<p>You were born in " + (currentYear - userAge) + "</p>";
+//     OUTPUT.innerHTML += "<p>In 10 years you will be " + (userAge + 10) + "</p>";
+//     OUTPUT.innerHTML += "<p>You have " + userMoney + " dollars</p>";
+//     OUTPUT.innerHTML += "<p>You spend half of your money and now you have " + (newMoney = (userMoney / 2)) + " dollar</p>";
+//     OUTPUT.innerHTML += "<p>Then you get $3, now you have " + (newMoney + 3) + " dollars</p>";
 
-}
+// }
 
 // function welcome() {
 //     OUTPUT.innerHTML = "<h1>Welcome to the Shop</h1>";
