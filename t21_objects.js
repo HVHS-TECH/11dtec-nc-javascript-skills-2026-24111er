@@ -11,9 +11,9 @@ var l;
 var i;
 const CURRENT_YEAR = 2026;
 var newMoney;
-var userDetails = {
-    
-}
+var userDetails = [{
+
+}]
 // Variables
 
 /*
@@ -93,6 +93,11 @@ function getFormInputName () {
     } else {
         OUTPUT.innerHTML += "<p>Hi " + _userName + "</p>";
         console.log(_userName)
+        userDetails.push({
+            Name: _userName,
+            Age: _userAge,
+            pocketMoney: _userMoney
+        })
     }
 
 }
