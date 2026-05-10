@@ -77,12 +77,38 @@ function getFormInputCountVerses() {
 
 
 
-function getFormInputName () {
+function getFormInput () {
     OUTPUT.innerHTML = "";
     SECOND_OUTPUT.innerHTML = "";
     const NAME = document.getElementById("Namefield");
     let _userName = (NAME.value)
     const MIN_LETTERS = 3;
+    const AGE = document.getElementById("Agefield");
+    let _userAge = Number(AGE.value);
+    const MONEY = document.getElementById("Moneyfield");
+    let _userMoney = Number(MONEY.value);
+    const COST_CHOCOLATE = 4;
+
+    if (MONEY.checkValidity() === false) {
+        OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
+    } else {
+        OUTPUT.innerHTML += "<p>You have " + _userMoney + " dollars</p>";
+        console.log(_userMoney)
+        if (_userMoney>=COST_CHOCOLATE) {
+            OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
+            OUTPUT.innerHTML += "<p>You CAN afford a chocolate bar</p>";
+        } else if (_userMoney<COST_CHOCOLATE) {
+            OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
+            OUTPUT.innerHTML += "<p>Sorry, you CAN'T afford a chocolate bar</p>";
+        }
+    }
+
+    if (AGE.checkValidity() === false) {
+        OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
+    } else {
+        OUTPUT.innerHTML += "<p>As of " + CURRENT_YEAR + " you are " + _userAge + " years old</p>";
+        console.log(userAge)
+    }
 
     if (isNaN(NAME.value) === false) {
         OUTPUT.innerHTML = "<b><p>Numbers can not be inserted in this area</p></b>";
@@ -102,44 +128,20 @@ function getFormInputName () {
 
 }
 
-function getFormInputAge () {
-    OUTPUT.innerHTML = "";
-    SECOND_OUTPUT.innerHTML = "";
-    const AGE = document.getElementById("Agefield");
-    let _userAge = Number(AGE.value);
+// function getFormInputAge () {
+//     OUTPUT.innerHTML = "";
+//     SECOND_OUTPUT.innerHTML = "";
+    
 
-    if (AGE.checkValidity() === false) {
-        OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
-    } else {
-        OUTPUT.innerHTML += "<p>As of " + CURRENT_YEAR + " you are " + _userAge + " years old</p>";
-        console.log(userAge)
-    }
+// }
 
-}
-
-function getFormInputMoney () {
-    OUTPUT.innerHTML = "";
-    SECOND_OUTPUT.innerHTML = "";
-    const MONEY = document.getElementById("Moneyfield");
-    let _userMoney = Number(MONEY.value);
-    const COST_CHOCOLATE = 4;
-
-    if (MONEY.checkValidity() === false) {
-        OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
-    } else {
-        OUTPUT.innerHTML += "<p>You have " + _userMoney + " dollars</p>";
-        console.log(_userMoney)
-        if (_userMoney>=COST_CHOCOLATE) {
-            OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
-            OUTPUT.innerHTML += "<p>You CAN afford a chocolate bar</p>";
-        } else if (_userMoney<COST_CHOCOLATE) {
-            OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
-            OUTPUT.innerHTML += "<p>Sorry, you CAN'T afford a chocolate bar</p>";
-        }
-    }
+// function getFormInputMoney () {
+//     OUTPUT.innerHTML = "";
+//     SECOND_OUTPUT.innerHTML = "";
+    
 
     
-}
+// }
 
 function start () {
     OUTPUT.innerHTML = "";
