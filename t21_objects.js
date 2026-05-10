@@ -11,6 +11,9 @@ var l;
 var i;
 const CURRENT_YEAR = 2026;
 var newMoney;
+var userDetails = {
+    
+}
 // Variables
 
 /*
