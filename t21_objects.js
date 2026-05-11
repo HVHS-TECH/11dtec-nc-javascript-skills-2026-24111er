@@ -5,8 +5,9 @@ console.log("Running t21.js")
 console.log("Hello World!")
 
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-const SECOND_OUTPUT = document.getElementById("spaceForJavaScriptOutputTwo")
+const SECOND_OUTPUT = document.getElementById("spaceForJavaScriptOutputTwo");
 var shoppingArray = [];
+var chocolateLike = ["You loath chocolate", "Chocolate is meh", "Chocolate is pretty good", "Chocolate is the best thing EVER!!!!"];
 var l;
 var i;
 const CURRENT_YEAR = 2026;
@@ -88,21 +89,23 @@ function getFormInput () {
     const MONEY = document.getElementById("Moneyfield");
     let _userMoney = Number(MONEY.value);
     const COST_CHOCOLATE = 4;
+    getFormInputName()
     getFormInputAge()
     getFormInputMoney()
-    getFormInputName()
+    
     userDetails.push({
         Name: _userName,
         Age: _userAge,
         pocketMoney: _userMoney
     })
+    console.log(userDetails)
 
     function getFormInputAge () {
     if (AGE.checkValidity() === false) {
         OUTPUT.innerHTML += "<b><p>Only numbers can be entered into this field</p></b>";
     } else {
         OUTPUT.innerHTML += "<p>As of " + CURRENT_YEAR + " you are " + _userAge + " years old</p>";
-        console.log(_userAge)
+        
     }
 }
     function getFormInputName () {
@@ -114,7 +117,7 @@ function getFormInput () {
         
         } else {
             OUTPUT.innerHTML += "<p>Hi " + _userName + "</p>";
-            console.log(_userName)
+            
         
         }
     }
@@ -124,7 +127,7 @@ function getFormInput () {
         OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
         } else {
             OUTPUT.innerHTML += "<p>You have " + _userMoney + " dollars</p>";
-            console.log(_userMoney)
+            
             if (_userMoney>=COST_CHOCOLATE) {
                 OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
                 OUTPUT.innerHTML += "<p>You CAN afford a chocolate bar</p>";
