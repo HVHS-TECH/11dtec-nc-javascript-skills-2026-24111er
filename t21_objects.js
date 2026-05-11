@@ -99,10 +99,10 @@ function getFormInput () {
 
     function getFormInputAge () {
     if (AGE.checkValidity() === false) {
-        OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
+        OUTPUT.innerHTML += "<b><p>Only numbers can be entered into this field</p></b>";
     } else {
         OUTPUT.innerHTML += "<p>As of " + CURRENT_YEAR + " you are " + _userAge + " years old</p>";
-        console.log(userAge)
+        console.log(_userAge)
     }
 }
     function getFormInputName () {
