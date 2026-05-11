@@ -88,59 +88,99 @@ function getFormInput () {
     const MONEY = document.getElementById("Moneyfield");
     let _userMoney = Number(MONEY.value);
     const COST_CHOCOLATE = 4;
+    getFormInputAge()
+    getFormInputMoney()
+    getFormInputName()
+    userDetails.push({
+        Name: _userName,
+        Age: _userAge,
+        pocketMoney: _userMoney
+    })
 
-    if (MONEY.checkValidity() === false) {
-        OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
-    } else {
-        OUTPUT.innerHTML += "<p>You have " + _userMoney + " dollars</p>";
-        console.log(_userMoney)
-        if (_userMoney>=COST_CHOCOLATE) {
-            OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
-            OUTPUT.innerHTML += "<p>You CAN afford a chocolate bar</p>";
-        } else if (_userMoney<COST_CHOCOLATE) {
-            OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
-            OUTPUT.innerHTML += "<p>Sorry, you CAN'T afford a chocolate bar</p>";
-        }
-    }
-
+    function getFormInputAge () {
     if (AGE.checkValidity() === false) {
         OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
     } else {
         OUTPUT.innerHTML += "<p>As of " + CURRENT_YEAR + " you are " + _userAge + " years old</p>";
         console.log(userAge)
     }
-
-    if (isNaN(NAME.value) === false) {
-        OUTPUT.innerHTML = "<b><p>Numbers can not be inserted in this area</p></b>";
+}
+    function getFormInputName () {
+        if (isNaN(NAME.value) === false) {
+            OUTPUT.innerHTML = "<b><p>Numbers can not be inserted in this area</p></b>";
         
-    } else if(_userName.length<MIN_LETTERS) {
-        OUTPUT.innerHTML = "<b><p>Please insert a name at least 3 letters long</p></b>";
+        } else if(_userName.length<MIN_LETTERS) {
+            OUTPUT.innerHTML = "<b><p>Please insert a name at least 3 letters long</p></b>";
         
-    } else {
-        OUTPUT.innerHTML += "<p>Hi " + _userName + "</p>";
-        console.log(_userName)
-        userDetails.push({
-            Name: _userName,
-            Age: _userAge,
-            pocketMoney: _userMoney
-        })
+        } else {
+            OUTPUT.innerHTML += "<p>Hi " + _userName + "</p>";
+            console.log(_userName)
+        
+        }
     }
+
+    function getFormInputMoney () {
+        if (MONEY.checkValidity() === false) {
+        OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
+        } else {
+            OUTPUT.innerHTML += "<p>You have " + _userMoney + " dollars</p>";
+            console.log(_userMoney)
+            if (_userMoney>=COST_CHOCOLATE) {
+                OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
+                OUTPUT.innerHTML += "<p>You CAN afford a chocolate bar</p>";
+            } else if (_userMoney<COST_CHOCOLATE) {
+                OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
+                OUTPUT.innerHTML += "<p>Sorry, you CAN'T afford a chocolate bar</p>";
+            }
+        }
+
+    
+    }   
+
+    
 
 }
 
-// function getFormInputAge () {
-//     OUTPUT.innerHTML = "";
-//     SECOND_OUTPUT.innerHTML = "";
+
+
     
 
-// }
+    
+
+
+
+
 
 // function getFormInputMoney () {
-//     OUTPUT.innerHTML = "";
-//     SECOND_OUTPUT.innerHTML = "";
-    
+//     if (MONEY.checkValidity() === false) {
+//         OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
+//     } else {
+//         OUTPUT.innerHTML += "<p>You have " + _userMoney + " dollars</p>";
+//         console.log(_userMoney)
+//         if (_userMoney>=COST_CHOCOLATE) {
+//             OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
+//             OUTPUT.innerHTML += "<p>You CAN afford a chocolate bar</p>";
+//         } else if (_userMoney<COST_CHOCOLATE) {
+//             OUTPUT.innerHTML += "<p>A chocolate bar costs $4</p>";
+//             OUTPUT.innerHTML += "<p>Sorry, you CAN'T afford a chocolate bar</p>";
+//         }
+//     }
 
     
+// }
+
+// function getFormInputName () {
+// if (isNaN(NAME.value) === false) {
+//         OUTPUT.innerHTML = "<b><p>Numbers can not be inserted in this area</p></b>";
+        
+//     } else if(_userName.length<MIN_LETTERS) {
+//         OUTPUT.innerHTML = "<b><p>Please insert a name at least 3 letters long</p></b>";
+        
+//     } else {
+//         OUTPUT.innerHTML += "<p>Hi " + _userName + "</p>";
+//         console.log(_userName)
+        
+//     }
 // }
 
 // function start () {
