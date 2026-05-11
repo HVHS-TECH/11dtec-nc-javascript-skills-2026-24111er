@@ -122,13 +122,19 @@ function getFormInput () {
         }
     }
 
-    function getFormInputChoclate () {
+    function getFormInputChocolate () {
         const CHOCOLATE_LIKENESS = document.getElementById("Chocolatefield").value;
-        let choco = Number(CHOCOLATE_LIKENESS);
+        let _chocoChoice = Number(CHOCOLATE_LIKENESS);
+        const MIN_CHOCOLATE = -1;
+        const MAX_CHOCOLATE = 4;
         if (CHOCOLATE_LIKENESS.checkValidity() === false) {
             OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
-        } else if()
-        Output.innerHTML = chocolateLike[choco];
+        } else if(_chocoChoice<MIN_CHOCOLATE || _chocoChoice>MAX_CHOCOLATE) {
+            OUTPUT.innerHTML = "<b><p>Please enter a number between 1 and 99</p></b>";
+        } else {
+            Output.innerHTML = chocolateLike[_chocoChoice];
+        }
+        
     }
 
     function getFormInputMoney () {
