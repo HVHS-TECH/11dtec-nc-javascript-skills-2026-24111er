@@ -122,6 +122,15 @@ function getFormInput () {
         }
     }
 
+    function getFormInputChoclate () {
+        const CHOCOLATE_LIKENESS = document.getElementById("Chocolatefield").value;
+        let choco = Number(CHOCOLATE_LIKENESS);
+        if (CHOCOLATE_LIKENESS.checkValidity() === false) {
+            OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
+        } else if()
+        Output.innerHTML = chocolateLike[choco];
+    }
+
     function getFormInputMoney () {
         if (MONEY.checkValidity() === false) {
         OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
