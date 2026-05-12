@@ -132,9 +132,9 @@ function getFormInput () {
         if (CHOCOLATE_LIKENESS.checkValidity() === false) {
             OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
         } else if(_chocoChoice<=MIN_CHOCOLATE || _chocoChoice>=MAX_CHOCOLATE) {
-            OUTPUT.innerHTML = "<b><p>Please enter a number between 1 and 99</p></b>";
+            OUTPUT.innerHTML = "<b><p>Please enter a number between 0 and 3</p></b>";
         } else {
-            Output.innerHTML = chocolateLike[_chocoChoice];
+            Output.innerHTML += chocolateLike[_chocoChoice];
         }
         
     }
