@@ -89,14 +89,20 @@ function getFormInput () {
     const MONEY = document.getElementById("Moneyfield");
     let _userMoney = Number(MONEY.value);
     const COST_CHOCOLATE = 4;
+    const CHOCOLATE_LIKENESS = document.getElementById("Chocolatefield").value;
+    let _chocoChoice = Number(CHOCOLATE_LIKENESS);
+    const MIN_CHOCOLATE = 0;
+    const MAX_CHOCOLATE = 3;
     getFormInputName()
     getFormInputAge()
+    getFormInputChocolate()
     getFormInputMoney()
     
     userDetails.push({
         Name: _userName,
         Age: _userAge,
-        pocketMoney: _userMoney
+        pocketMoney: _userMoney,
+        chocolatePreference: _chocoChoice
     })
     console.log(userDetails)
 
@@ -123,13 +129,9 @@ function getFormInput () {
     }
 
     function getFormInputChocolate () {
-        const CHOCOLATE_LIKENESS = document.getElementById("Chocolatefield").value;
-        let _chocoChoice = Number(CHOCOLATE_LIKENESS);
-        const MIN_CHOCOLATE = -1;
-        const MAX_CHOCOLATE = 4;
         if (CHOCOLATE_LIKENESS.checkValidity() === false) {
             OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
-        } else if(_chocoChoice<MIN_CHOCOLATE || _chocoChoice>MAX_CHOCOLATE) {
+        } else if(_chocoChoice<=MIN_CHOCOLATE || _chocoChoice>=MAX_CHOCOLATE) {
             OUTPUT.innerHTML = "<b><p>Please enter a number between 1 and 99</p></b>";
         } else {
             Output.innerHTML = chocolateLike[_chocoChoice];
