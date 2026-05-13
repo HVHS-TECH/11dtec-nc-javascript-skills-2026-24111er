@@ -166,5 +166,22 @@ function getFormInput () {
 // }
 
 function buttonClicked() {
-    
+    _userName = {
+        value: 0
+    }
+    _userAge = {
+        value: 0
+    }
+    _userMoney = {
+        value: 0
+    }
+    _chocoChoice = {
+        value: 0
+    }
+    _verseCount = {
+        value: 0
+    }
+    _shoppingValue = {
+        value: 0
+    }
 }
