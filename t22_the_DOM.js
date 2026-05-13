@@ -34,7 +34,7 @@ Functions
 function getFormInputShopping () {
     OUTPUT.innerHTML = "";
     SECOND_OUTPUT.innerHTML = "";
-    let _shoppingValue = document.getElementById("Shoppingfield").value;
+    let _shoppingValue = document.getElementById("shoppingField").value;
     shoppingArray.push(_shoppingValue)
     OUTPUT.innerHTML += "<p>You have added " + _shoppingValue + " to your list</p>";
    
@@ -51,7 +51,7 @@ function getFormInputList () {
 }
 
 function getFormInputCountVerses() {
-    const COUNT_VALUE = document.getElementById("Countfield");
+    const COUNT_VALUE = document.getElementById("countField");
     let _verseCount = Number(COUNT_VALUE.value);
     const VERSE_MAX = 99;
     const VERSE_MIN = 1;
@@ -81,15 +81,15 @@ function getFormInputCountVerses() {
 function getFormInput () {
     OUTPUT.innerHTML = "";
     SECOND_OUTPUT.innerHTML = "";
-    const NAME = document.getElementById("Namefield");
+    const NAME = document.getElementById("nameField");
     let _userName = (NAME.value)
     const MIN_LETTERS = 3;
-    const AGE = document.getElementById("Agefield");
+    const AGE = document.getElementById("ageField");
     let _userAge = Number(AGE.value);
-    const MONEY = document.getElementById("Moneyfield");
+    const MONEY = document.getElementById("moneyField");
     let _userMoney = Number(MONEY.value);
     const COST_CHOCOLATE = 4;
-    const CHOCOLATE_LIKENESS = document.getElementById("Chocolatefield");
+    const CHOCOLATE_LIKENESS = document.getElementById("chocolateField");
     let _chocoChoice = Number(CHOCOLATE_LIKENESS.value);
     const MIN_CHOCOLATE = 0;
     const MAX_CHOCOLATE = 3;
@@ -166,22 +166,22 @@ function getFormInput () {
 // }
 
 function buttonClicked() {
-    _userName = {
+    nameField = {
         value: 0
     }
-    _userAge = {
+    ageField = {
         value: 0
     }
-    _userMoney = {
+    moneyField = {
         value: 0
     }
-    _chocoChoice = {
+    chocolateField = {
         value: 0
     }
-    _verseCount = {
+    countField = {
         value: 0
     }
-    _shoppingValue = {
+    shoppingField = {
         value: 0
     }
 }
