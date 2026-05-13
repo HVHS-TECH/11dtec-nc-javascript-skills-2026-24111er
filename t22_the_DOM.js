@@ -176,7 +176,7 @@ function buttonClicked() {
         value: ''
     }
     ageField = {
-        value: ''
+        innerHTML: ''
     }
     moneyField = {
         value: ''
@@ -190,4 +190,11 @@ function buttonClicked() {
     shoppingField = {
         value: ''
     }
+    console.log(
+    nameField,
+    ageField ,
+    moneyField,
+    chocolateField,
+    countField,
+    shoppingField)
 }
