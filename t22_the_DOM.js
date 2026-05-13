@@ -173,7 +173,7 @@ function buttonClicked() {
     // let countField = document.getElementById("countField");
     // let shoppingField = document.getElementById("shoppingField");
     var nameField = {
-        value: ''
+        value: ""
     }
     var ageField = {
         innerHTML: ''
