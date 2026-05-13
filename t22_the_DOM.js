@@ -166,7 +166,7 @@ function getFormInput () {
 // }
 
 function buttonClicked() {
-     let nameField = document.getElementById("nameField");
+     let nameField = document.getElementById("nameField".replaceAll(""));
      let ageField = document.getElementById("ageField");
      let moneyField = document.getElementById("moneyField");
      let chocolateField = document.getElementById("chocolateField");
