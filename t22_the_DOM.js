@@ -176,7 +176,7 @@ function buttonClicked() {
         value: ""
     }
     var ageField = {
-        innerHTML: ''
+        value: ''
     }
     var moneyField = {
         value: ''
