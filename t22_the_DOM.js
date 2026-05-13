@@ -166,22 +166,28 @@ function getFormInput () {
 // }
 
 function buttonClicked() {
+    let nameField = document.getElementById("nameField");
+    let ageField = document.getElementById("ageField");
+    let moneyField = document.getElementById("moneyField");
+    let chocolateField = document.getElementById("chocolateField");
+    let countField = document.getElementById("countField");
+    let shoppingField = document.getElementById("shoppingField");
     nameField = {
-        value: 0
+        value: ''
     }
     ageField = {
-        value: 0
+        value: ''
     }
     moneyField = {
-        value: 0
+        value: ''
     }
     chocolateField = {
-        value: 0
+        value: ''
     }
     countField = {
-        value: 0
+        value: ''
     }
     shoppingField = {
-        value: 0
+        value: ''
     }
 }
