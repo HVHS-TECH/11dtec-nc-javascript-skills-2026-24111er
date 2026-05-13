@@ -13,7 +13,7 @@ var i;
 const CURRENT_YEAR = 2026;
 var newMoney;
 var userDetails = [{
-    
+
 }]
 // Variables
 
@@ -89,8 +89,8 @@ function getFormInput () {
     const MONEY = document.getElementById("Moneyfield");
     let _userMoney = Number(MONEY.value);
     const COST_CHOCOLATE = 4;
-    const CHOCOLATE_LIKENESS = document.getElementById("Chocolatefield").value;
-    let _chocoChoice = Number(CHOCOLATE_LIKENESS);
+    const CHOCOLATE_LIKENESS = document.getElementById("Chocolatefield");
+    let _chocoChoice = Number(CHOCOLATE_LIKENESS.value);
     const MIN_CHOCOLATE = 0;
     const MAX_CHOCOLATE = 3;
     getFormInputName()
@@ -129,7 +129,7 @@ function getFormInput () {
     }
 
     function getFormInputChocolate () {
-        if (isNaN(CHOCOLATE_LIKENESS.value) === true) {
+        if (CHOCOLATE_LIKENESS.checkValidity() === false) {
             OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
         } else if(_chocoChoice<=MIN_CHOCOLATE || _chocoChoice>=MAX_CHOCOLATE) {
             OUTPUT.innerHTML = "<b><p>Please enter a number between 0 and 3</p></b>";
