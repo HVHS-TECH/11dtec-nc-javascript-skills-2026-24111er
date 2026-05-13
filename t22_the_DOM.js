@@ -176,19 +176,19 @@ function buttonClicked() {
         value: ""
     }
     var ageField = {
-        value: ''
+        value: ""
     }
     var moneyField = {
-        value: ''
+        value: ""
     }
     var chocolateField = {
-        value: ''
+        value: ""
     }
     var countField = {
-        value: ''
+        value: ""
     }
     var shoppingField = {
-        value: ''
+        value: ""
     }
     console.log(
     nameField,
