@@ -129,12 +129,12 @@ function getFormInput () {
     }
 
     function getFormInputChocolate () {
-        if (isNaN(CHOCOLATE_LIKENESS.value) === false) {
+        if (isNaN(CHOCOLATE_LIKENESS.value) === true) {
             OUTPUT.innerHTML = "<b><p>Only numbers can be entered into this field</p></b>";
         } else if(_chocoChoice<=MIN_CHOCOLATE || _chocoChoice>=MAX_CHOCOLATE) {
             OUTPUT.innerHTML = "<b><p>Please enter a number between 0 and 3</p></b>";
         } else {
-            Output.innerHTML += chocolateLike[_chocoChoice];
+            OUTPUT.innerHTML += chocolateLike[_chocoChoice];
         }
         
     }
