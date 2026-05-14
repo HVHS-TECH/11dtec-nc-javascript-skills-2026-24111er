@@ -184,30 +184,19 @@ function getFormInput () {
 // }
 
 function buttonClicked() {
-    //  let nameField = document.getElementById("nameField".replaceAll(""));
-    //  let ageField = document.getElementById("ageField");
-    //  let moneyField = document.getElementById("moneyField");
-    //  let chocolateField = document.getElementById("chocolateField");
-    //  let countField = document.getElementById("countField");
-    //  let shoppingField = document.getElementById("shoppingField");
-    var nameField = {
-        value: ""
-    }
-    var ageField = {
-        value: ""
-    }
-    var moneyField = {
-        value: ""
-    }
-    var chocolateField = {
-        value: ""
-    }
-    var countField = {
-        value: ""
-    }
-    var shoppingField = {
-        value: ""
-    }
+    let nameField = document.getElementById("nameField");
+    let ageField = document.getElementById("ageField");
+    let moneyField = document.getElementById("moneyField");
+    let chocolateField = document.getElementById("chocolateField");
+    let countField = document.getElementById("countField");
+    let shoppingField = document.getElementById("shoppingField");
+    nameField.value = ""
+    ageField.value = "";
+    moneyField.value = "";
+    chocolateField.value = "";
+    countField.value = "";
+    shoppingField.value = "";
+    
     console.log(
     nameField,
     ageField ,
