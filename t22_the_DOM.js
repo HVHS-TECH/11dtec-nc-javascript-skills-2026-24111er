@@ -184,12 +184,14 @@ function getFormInput () {
 // }
 
 function buttonClicked() {
+    var inputClear = {}
     let nameField = document.getElementById("nameField");
     let ageField = document.getElementById("ageField");
     let moneyField = document.getElementById("moneyField");
     let chocolateField = document.getElementById("chocolateField");
     let countField = document.getElementById("countField");
     let shoppingField = document.getElementById("shoppingField");
+    
     nameField.value = ""
     ageField.value = "";
     moneyField.value = "";
