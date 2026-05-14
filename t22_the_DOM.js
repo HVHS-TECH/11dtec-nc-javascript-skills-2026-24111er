@@ -166,12 +166,12 @@ function getFormInput () {
 // }
 
 function buttonClicked() {
-     let nameField = document.getElementById("nameField".replaceAll(""));
-     let ageField = document.getElementById("ageField");
-     let moneyField = document.getElementById("moneyField");
-     let chocolateField = document.getElementById("chocolateField");
-     let countField = document.getElementById("countField");
-     let shoppingField = document.getElementById("shoppingField");
+    //  let nameField = document.getElementById("nameField".replaceAll(""));
+    //  let ageField = document.getElementById("ageField");
+    //  let moneyField = document.getElementById("moneyField");
+    //  let chocolateField = document.getElementById("chocolateField");
+    //  let countField = document.getElementById("countField");
+    //  let shoppingField = document.getElementById("shoppingField");
      nameField = {
         value: ""
     }
