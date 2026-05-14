@@ -184,13 +184,20 @@ function getFormInput () {
 // }
 
 function buttonClicked() {
+    var nameField = document.getElementById("nameField");
+    var ageField = document.getElementById("ageField");
+    var moneyField = document.getElementById("moneyField");
+    var chocolateField = document.getElementById("chocolateField");
+    var countField = document.getElementById("countField");
+    var shoppingField = document.getElementById("shoppingField");
     var inputClear = {
-    nameField = document.getElementById("nameField"),
-    ageField = document.getElementById("ageField"),
-    moneyField = document.getElementById("moneyField"),
-    chocolateField = document.getElementById("chocolateField"),
-    countField = document.getElementById("countField"),
-    shoppingField = document.getElementById("shoppingField")
+        nameField: "",
+        ageField: "" ,
+        moneyField: "",
+        chocolateField: "",
+        countField: "",
+        shoppingField: ""
+
     }
     inputClear.value = "";
     // nameField.value = "";
