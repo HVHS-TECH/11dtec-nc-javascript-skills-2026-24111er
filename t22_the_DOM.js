@@ -172,22 +172,22 @@ function buttonClicked() {
     //  let chocolateField = document.getElementById("chocolateField");
     //  let countField = document.getElementById("countField");
     //  let shoppingField = document.getElementById("shoppingField");
-     nameField = {
+    var nameField = {
         value: ""
     }
-     ageField = {
+    var ageField = {
         value: ""
     }
-     moneyField = {
+    var moneyField = {
         value: ""
     }
-     chocolateField = {
+    var chocolateField = {
         value: ""
     }
-     countField = {
+    var countField = {
         value: ""
     }
-     shoppingField = {
+    var shoppingField = {
         value: ""
     }
     console.log(
