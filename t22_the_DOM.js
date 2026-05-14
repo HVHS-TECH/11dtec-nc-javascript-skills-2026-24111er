@@ -184,20 +184,21 @@ function getFormInput () {
 // }
 
 function buttonClicked() {
-    var inputClear = {}
-    let nameField = document.getElementById("nameField");
-    let ageField = document.getElementById("ageField");
-    let moneyField = document.getElementById("moneyField");
-    let chocolateField = document.getElementById("chocolateField");
-    let countField = document.getElementById("countField");
-    let shoppingField = document.getElementById("shoppingField");
-    
-    nameField.value = ""
-    ageField.value = "";
-    moneyField.value = "";
-    chocolateField.value = "";
-    countField.value = "";
-    shoppingField.value = "";
+    var inputClear = {
+    nameField = document.getElementById("nameField"),
+    ageField = document.getElementById("ageField"),
+    moneyField = document.getElementById("moneyField"),
+    chocolateField = document.getElementById("chocolateField"),
+    countField = document.getElementById("countField"),
+    shoppingField = document.getElementById("shoppingField")
+    }
+    inputClear.value = "";
+    // nameField.value = "";
+    // ageField.value = "";
+    // moneyField.value = "";
+    // chocolateField.value = "";
+    // countField.value = "";
+    // shoppingField.value = "";
     
     console.log(
     nameField,
