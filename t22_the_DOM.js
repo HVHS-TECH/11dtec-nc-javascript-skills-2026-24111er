@@ -15,6 +15,24 @@ var newMoney;
 var userDetails = [{
 
 }]
+var nameField = {
+        value: ""
+    }
+var ageField = {
+        value: ""
+    }
+var moneyField = {
+        value: ""
+    }
+var chocolateField = {
+        value: ""
+    }
+var countField = {
+        value: ""
+    }
+var shoppingField = {
+        value: ""
+    }
 // Variables
 
 /*
